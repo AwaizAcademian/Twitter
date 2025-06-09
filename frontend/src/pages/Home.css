@@ -1,0 +1,45 @@
+/* Make the home container stretch to the available space (body is already display:flex) */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;            /* center horizontally within body */
+  padding: 1rem;
+  gap: 2rem;
+}
+
+/* Each side panel takes equal space */
+.posts-area,
+.notifications-area {
+  flex: 1;
+  background-color: #1a1a1a;  /* dark panel background */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-y: auto;           /* scroll if content grows */
+}
+
+/* Section headings should contrast on dark background */
+.posts-area h2,
+.notifications-area h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+/* Ensure any paragraphs or messages also appear in white */
+.posts-area p,
+.notifications-area p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Style for an empty‐state message */
+.posts-area p {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #bbb;
+}
